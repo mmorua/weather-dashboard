@@ -1,0 +1,8 @@
+.banner {
+    background-image: linear-gradient(#398feb, #003EFF);
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    margin: 18px;
+    padding: 5px;
+}
