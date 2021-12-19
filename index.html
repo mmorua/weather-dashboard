@@ -4,53 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Dashboard</title>
-    <!-- linking in boostrap CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!-- linking in css file -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Weather-Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
+
+
 <body>
-    <!-- header start -->
-    <header>
-        <div class="banner">
-            Weather Dashboard
-        </div>
-    </header>
-    <!-- header end -->
+    <div class="weather-header d-flex justify-content-center">
+        WEATHER DASHBOARD
+    </div>
+    <div class="container-fluid">
+        <div class="row vw-100 vh-100" id="main-container">
+            <div class="columns  col-3" id="search-div">
+                    <label for="city-search"><h5>Search for a City:</h5></label><br>
+                    <input type="text" id="form-inputt" class="search-form" placeholder="Austin">
+                    <input type="submit" id="form-input" value ="search" class="search-btn">
+                 <br><br><br>
 
-    <!-- main start -->
-    <main class= "container-fluid">
-        <!-- row start -->
-        <div class="row">
-            <!-- form to search for a city -->
-            <form class="form-group col-3">
-                <label for="city-search"><h5>Search for a City:</h5></label><br>
-                <input type="search" class="col-xs-3 w-100" id="city-search" placeholder="Austin"><br>
-                <button type="submit" class="mt-2 btn-primary btn-block" id="search-btn">Search</button>
-                </form>
-            <!-- span to display current weather for searched city -->
-            <div class="col-9">
-                <span id="currentweather"><h5>Current Weather</h5></span>
+                 <div class='card align-middle'><ul class="city-list" id="city-list-id"></ul></div>
+              
             </div>
-        <!-- row end -->
-        </div>
-        <!-- row start -->
-        <div class="row">
-            <!-- span to display searched cities -->
-            <div class="col-3">
-                <span id="city-list"><h6>Recent Searches:</h6></span>
-            </div>
-            <!-- span to display 5 day weather forecast for searched city -->
-            <div class="col-9">
-                <span id="forecast-weather"><h5>5-Day Forecast:</h5></span>   
-            </div>
-        <!-- row end -->
-        </div>
-    <!-- main end -->
-    </main>
+            <div class="columns col-9" id="stats-forecast-div">
 
-    <!-- linking in javascript file -->
-    <script src="assets/js/script.js"></script> 
+                    <div class="stats-div columns  col-12 h-50" id="stats-div">
+                        <span id="currentday"></span>
+                    </div>
+                    <div class="forceast-div columns col-12 h-50" id="forecast-div">
+                        <span><h3>5-DAY-FORECAST</h3></span>
+                        <div class="card-div d-flex flex-row bd-highlight mb-3 h-50 p-20" id = "card-div-id"></div>
+                    </div>
+            </div>
+    </div>
 </body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch@0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="assets/js/script.js"></script>
 </html>
