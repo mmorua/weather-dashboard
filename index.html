@@ -11,37 +11,45 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <!-- header start -->
     <header>
         <div class="banner">
             Weather Dashboard
         </div>
-        <div class="container-fluid">
-            <!-- bootstrap row -->
-            <div class="row">
-                <!-- form to search for a city -->
-                <form class="form-group col-3">
-                    <label for="city-search"><h5>Search for a City:</h5></label><br>
-                    <input type="search" class="col-xs-3 w-100" id="city-search" placeholder="Austin"><br>
-                    <button type="submit" class="mt-2 btn-primary btn-block" id="search-btn">Search</button>
-                </form>
-                <!-- span to display current weather for searched city -->
-                <div class="col-9">
-                    <span id="currentweather"><h5>Current Weather</h5></span>
-                </div>
-            </div>
-            <!-- bootstrap row -->
-            <div class="row">
-                <!-- span to display searched cities -->
-                <div class="col-3">
-                    <span id="city-list"><h6>Recent Searches:</h6></span>
-                </div>
-                <!-- span to display 5 day weather forecast for searched city -->
-                <div class="col-9">
-                    <span id="forecastweather"><h5>5-Day Forecast:</h5></span>   
-                </div>
-            </div>
-        </div>
     </header>
+    <!-- header end -->
+
+    <!-- main start -->
+    <main class= "container-fluid">
+        <!-- row start -->
+        <div class="row">
+            <!-- form to search for a city -->
+            <form class="form-group col-3">
+                <label for="city-search"><h5>Search for a City:</h5></label><br>
+                <input type="search" class="col-xs-3 w-100" id="city-search" placeholder="Austin"><br>
+                <button type="submit" class="mt-2 btn-primary btn-block" id="search-btn">Search</button>
+                </form>
+            <!-- span to display current weather for searched city -->
+            <div class="col-9">
+                <span id="currentweather"><h5>Current Weather</h5></span>
+            </div>
+        <!-- row end -->
+        </div>
+        <!-- row start -->
+        <div class="row">
+            <!-- span to display searched cities -->
+            <div class="col-3">
+                <span id="city-list"><h6>Recent Searches:</h6></span>
+            </div>
+            <!-- span to display 5 day weather forecast for searched city -->
+            <div class="col-9">
+                <span id="forecast-weather"><h5>5-Day Forecast:</h5></span>   
+            </div>
+        <!-- row end -->
+        </div>
+    <!-- main end -->
+    </main>
+
     <!-- linking in javascript file -->
     <script src="assets/js/script.js"></script> 
 </body>
